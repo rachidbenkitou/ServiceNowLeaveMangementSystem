@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="c6e958b697b882500606bed0f053afe4" label="Leave Request" max_length="40" name="x_1320315_lms_leave_request" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Leave Type" max_length="40" name="leave_type" type="choice">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+    </element>
+</database>
