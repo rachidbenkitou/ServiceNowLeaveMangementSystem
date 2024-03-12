@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="leave_type" table="x_1320315_lms_leave_request">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="leave_type" table="x_1320315_lms_leave_bucket">
         <active>true</active>
         <array>false</array>
-        <attributes>edge_encryption_enabled=true</attributes>
+        <attributes/>
         <audit>false</audit>
-        <calculation/>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
         <choice>3</choice>
-        <choice_field/>
-        <choice_table/>
+        <choice_field>leave_type</choice_field>
+        <choice_table>x_1320315_lms_leave_request</choice_table>
         <column_label>Leave Type</column_label>
         <comments/>
         <create_roles/>
-        <default_value>cl</default_value>
+        <default_value/>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -30,7 +35,7 @@
         <internal_type display_value="Choice">choice</internal_type>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <name>x_1320315_lms_leave_request</name>
+        <name>x_1320315_lms_leave_bucket</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
@@ -46,14 +51,14 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2024-03-11 02:11:16</sys_created_on>
+        <sys_created_on>2024-03-11 22:50:55</sys_created_on>
         <sys_name>Leave Type</sys_name>
         <sys_package display_value="Leave Management System " source="x_1320315_lms">8b4958f297b882500606bed0f053af6c</sys_package>
         <sys_policy/>
         <sys_scope display_value="Leave Management System ">8b4958f297b882500606bed0f053af6c</sys_scope>
-        <sys_update_name>sys_dictionary_x_1320315_lms_leave_request_leave_type</sys_update_name>
+        <sys_update_name>sys_dictionary_x_1320315_lms_leave_bucket_leave_type</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-03-11 22:58:21</sys_updated_on>
+        <sys_updated_on>2024-03-11 23:07:07</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

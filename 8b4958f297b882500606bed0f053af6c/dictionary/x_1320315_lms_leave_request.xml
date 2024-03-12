@@ -1,8 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="c6e958b697b882500606bed0f053afe4" label="Leave Request" max_length="40" name="x_1320315_lms_leave_request" type="collection">
-        <element attributes="edge_encryption_enabled=true" choice="1" label="Leave Type" max_length="40" name="leave_type" type="choice">
-            <choice/>
+        <element label="Accrued" max_length="40" name="accrued" type="float"/>
+        <element choice="3" default="nyr" label="Approval" max_length="40" name="approval" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Approved" value="approved"/>
+                <element inactive_on_update="false" label="Not Yet Requested" value="nyr"/>
+                <element inactive_on_update="false" label="Rejected" value="rejected"/>
+                <element inactive_on_update="false" label="Requested" value="requested"/>
+            </choice>
+        </element>
+        <element label="Balance" max_length="40" name="balance" type="float"/>
+        <element label="Comments" max_length="40" name="comments" type="string"/>
+        <element label="Duration" max_length="40" name="duration" type="float"/>
+        <element label="End Date" max_length="40" name="end_date" type="glide_date"/>
+        <element label="Half Day" max_length="40" name="half_day" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="cl" label="Leave Type" max_length="40" name="leave_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Casual Leave" value="cl"/>
+                <element inactive_on_update="false" label="Earned Leave" value="el"/>
+                <element inactive_on_update="false" label="Sick Leave" value="sl"/>
+                <element inactive_on_update="false" label="WFH" value="wfh"/>
+            </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Requested By" max_length="32" name="requested_by" reference="sys_user" type="reference"/>
+        <element label="Start Date" max_length="40" name="start_date" type="glide_date"/>
+        <element choice="3" default="open" label="Status" max_length="40" name="status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Cancelled" value="cancelled"/>
+                <element inactive_on_update="false" label="Open" value="open"/>
+                <element inactive_on_update="false" label="Submitted" value="submitted"/>
+            </choice>
+        </element>
+        <element label="Taken" max_length="40" name="taken" type="float"/>
+        <index name="index">
+            <element name="requested_by"/>
+        </index>
     </element>
 </database>

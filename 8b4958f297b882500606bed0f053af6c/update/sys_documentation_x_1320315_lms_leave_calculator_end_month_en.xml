@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="end_month" label="End Month" language="en" table="x_1320315_lms_leave_calculator">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>end_month</element>
+            <help/>
+            <hint/>
+            <label>End Month</label>
+            <language>en</language>
+            <name>x_1320315_lms_leave_calculator</name>
+            <plural>End Months</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2024-03-11 23:11:58</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>End Month</sys_name>
+            <sys_package display_value="Leave Management System " source="x_1320315_lms">8b4958f297b882500606bed0f053af6c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Leave Management System ">8b4958f297b882500606bed0f053af6c</sys_scope>
+            <sys_update_name>sys_documentation_x_1320315_lms_leave_calculator_end_month_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2024-03-11 23:11:58</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
