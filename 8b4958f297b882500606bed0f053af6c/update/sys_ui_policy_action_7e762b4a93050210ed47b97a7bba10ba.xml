@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>end_date</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-21 19:27:33</sys_created_on>
+        <sys_id>7e762b4a93050210ed47b97a7bba10ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>end_date</sys_name>
+        <sys_package display_value="Leave Management System " source="x_1320315_lms">8b4958f297b882500606bed0f053af6c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave Management System ">8b4958f297b882500606bed0f053af6c</sys_scope>
+        <sys_update_name>sys_ui_policy_action_7e762b4a93050210ed47b97a7bba10ba</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-21 19:27:33</sys_updated_on>
+        <table>x_1320315_lms_leave_request</table>
+        <ui_policy display_value="Hide End Date for Half Day">b116634a93050210ed47b97a7bba105d</ui_policy>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+</record_update>
