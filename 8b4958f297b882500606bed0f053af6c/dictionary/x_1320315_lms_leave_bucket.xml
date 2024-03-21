@@ -5,7 +5,12 @@
         <element label="Employee" max_length="32" name="employee" reference="sys_user" type="reference"/>
         <element label="Last Year Balance" max_length="40" name="last_year_balance" type="float"/>
         <element choice="3" choice_field="leave_type" choice_table="x_1320315_lms_leave_request" label="Leave Type" max_length="40" name="leave_type" type="choice">
-            <choice/>
+            <choice>
+                <element inactive_on_update="false" label="Casual Leave" sequence="0" value="cl"/>
+                <element inactive_on_update="false" label="Earned Leave" sequence="1" value="el"/>
+                <element inactive_on_update="false" label="Sick Leave" sequence="2" value="sl"/>
+                <element inactive_on_update="false" label="WFH" sequence="3" value="wfh"/>
+            </choice>
         </element>
         <element label="Taken" max_length="40" name="taken" type="float"/>
         <index name="index">

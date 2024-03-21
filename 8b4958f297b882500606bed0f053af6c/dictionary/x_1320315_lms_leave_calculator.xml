@@ -10,7 +10,12 @@
             </choice>
         </element>
         <element choice="3" choice_field="leave_type" choice_table="x_1320315_lms_leave_request" default="cl" label="Leave Type" max_length="40" name="leave_type" type="choice">
-            <choice/>
+            <choice>
+                <element inactive_on_update="false" label="Casual Leave" sequence="0" value="cl"/>
+                <element inactive_on_update="false" label="Earned Leave" sequence="1" value="el"/>
+                <element inactive_on_update="false" label="Sick Leave" sequence="2" value="sl"/>
+                <element inactive_on_update="false" label="WFH" sequence="3" value="wfh"/>
+            </choice>
         </element>
         <element label="Starting Month" max_length="40" name="starting_month" type="string"/>
         <index name="index">
