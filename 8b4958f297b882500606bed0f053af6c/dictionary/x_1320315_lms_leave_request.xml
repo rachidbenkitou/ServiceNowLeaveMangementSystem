@@ -23,7 +23,7 @@
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
-        <element label="Requested By" max_length="32" name="requested_by" reference="sys_user" type="reference"/>
+        <element default="javascript: gs.getUserID();" label="Requested By" max_length="32" name="requested_by" reference="sys_user" type="reference"/>
         <element label="Start Date" max_length="40" name="start_date" type="glide_date"/>
         <element choice="3" default="open" label="Status" max_length="40" name="status" type="string">
             <choice>

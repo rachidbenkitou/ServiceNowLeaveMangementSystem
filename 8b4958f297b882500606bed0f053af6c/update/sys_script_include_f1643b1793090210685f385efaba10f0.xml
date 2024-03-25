@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1320315_lms.lmsAjax</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>lmsAjax</name>
+        <script><![CDATA[var lmsAjax = Class.create();
+lmsAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    getDateDiff: function() {
+        var d1 = new GlideDate();
+        d1.setDisplayValue(this.getParameter('sysparm_start'));
+        var d2 = new GlideDate();
+        d2.setDisplayValue(this.getParameter('sysparm_end'));
+
+        var duration = GlideDate.subtract(d1, d2);
+		return duration.getNumericValue(); 
+    },
+
+    type: 'lmsAjax'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-25 17:49:15</sys_created_on>
+        <sys_id>f1643b1793090210685f385efaba10f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>lmsAjax</sys_name>
+        <sys_package display_value="Leave Management System " source="x_1320315_lms">8b4958f297b882500606bed0f053af6c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Leave Management System ">8b4958f297b882500606bed0f053af6c</sys_scope>
+        <sys_update_name>sys_script_include_f1643b1793090210685f385efaba10f0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-25 17:49:15</sys_updated_on>
+    </sys_script_include>
+</record_update>
