@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1320315_lms_leave_request</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_1320315_lms_leave_request">approval=approved^status=submitted^EQ<item display_value="Approved" endquery="false" field="approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
+            <item display_value="Submitted" endquery="false" field="status" goto="false" newquery="false" operator="=" or="false" value="submitted"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Calculate Leaves</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Add your code here
+	var gr = new GlideRecord('x_1320315_lms_leave_bucket');
+	gr.addQuery('employee', current.requested_by);
+	gr.addQuery('leave_type', current.leave_type);
+	gr.query();
+	if(gr.next()){
+		gr.balance= gr.balance-current.duration;
+		gr.taken= gr.taken+current.duration;
+		gr.update();
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-03-26 00:18:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c86e45a7938d0210685f385efaba10ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Calculate Leaves</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Leave Management System " source="x_1320315_lms">8b4958f297b882500606bed0f053af6c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Leave Management System ">8b4958f297b882500606bed0f053af6c</sys_scope>
+        <sys_update_name>sys_script_c86e45a7938d0210685f385efaba10ba</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-03-26 00:18:23</sys_updated_on>
+        <template/>
+        <when>async_always</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=c86e45a7938d0210685f385efaba10ba"/>
+</record_update>

@@ -14,7 +14,7 @@
         <element label="Duration" max_length="40" name="duration" type="float"/>
         <element label="End Date" max_length="40" name="end_date" type="glide_date"/>
         <element label="Half Day" max_length="40" name="half_day" type="boolean"/>
-        <element attributes="edge_encryption_enabled=true" choice="3" default="cl" label="Leave Type" max_length="40" name="leave_type" type="choice">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Leave Type" max_length="40" name="leave_type" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Casual Leave" value="cl"/>
                 <element inactive_on_update="false" label="Earned Leave" value="el"/>
